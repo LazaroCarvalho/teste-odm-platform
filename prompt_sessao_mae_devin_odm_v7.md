@@ -351,3 +351,7 @@ Se não conseguir localizar ou ler os arquivos exigidos, pare e emita `NO_GO` ou
 Esta primeira sessão não deve produzir código.
 
 Ela deve produzir apenas a **preparação operacional segura** para que a sessão mãe possa abrir ou orientar a primeira sessão dedicada de implementação sem violar a documentação, os gates, os handoffs, os guard-rails IBM ODM/BRE, o workflow Git/PR e a rastreabilidade Requirement → Evidence.
+
+
+
+
