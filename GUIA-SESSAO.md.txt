@@ -1,54 +1,15 @@
-Modo: BAL Engine ↔ DLM ↔ Test Generator Architecture Investigation / Large Repo Multi-Session / Autonomous Orchestrator / Target V7 Only / No Implementation Yet.
+Você executou uma única onda com 8 sessões. Confirme se isso foi apenas a Wave 1 de discovery ou se você está tratando como investigação completa.
 
-Estou anexando:
+Antes de recomendar arquitetura final, valide explicitamente:
 
-1. PROMPT_MESTRE_DEVIN_INVESTIGACAO_BAL_DLM_GERADOR_TESTES_ODM_V7_V7_TARGET_ONLY.md
-2. ODM_V7_DOCUMENTACAO_UNIFICADA_IMPLEMENTATION_PLAN_READY.md
+1. Quais shards target V7 foram cobertos e quais não foram?
+2. Onde estão TARGET_V7_SCOPE_CLASSIFICATION.md, LEGACY_EXCLUSION_LEDGER.md e TARGET_LEGACY_TOUCHPOINT_RISK_REGISTER.md?
+3. Onde está REPO_INVESTIGATION_COVERAGE_MAP.md com paths cobertos/não cobertos?
+4. Onde está a matriz parser antigo vs motor BAL vs constructs reais?
+5. Onde está a construct visibility matrix mostrando risco de false coverage?
+6. Onde está o dataflow producer/consumer entre parser/BAL engine/DLM/gerador?
+7. Onde está a auditoria de contracts, schemas, builders e artifacts target V7?
+8. Onde está o PRE_DECISION_EVIDENCE_READINESS_CHECK.md?
+9. Onde está o red team da recomendação?
 
-Execute o arquivo PROMPT_MESTRE_DEVIN_INVESTIGACAO_BAL_DLM_GERADOR_TESTES_ODM_V7_V7_TARGET_ONLY.md.
-
-Objetivo:
-Investigar no repositório o gap arquitetural em que existe um motor BAL mais maduro/robusto, mas o gerador de testes ainda consome o parser BAL antigo/deficitário do DLM. A meta é descobrir o estado real, medir o risco de false coverage, auditar profundamente a qualidade das camadas, artifacts, schemas, contracts, specs, builders, boundaries e implementações atuais relacionadas à arquitetura-alvo V7, entender por que integrar o motor BAL ao DLM é difícil, comparar alternativas arquiteturais e recomendar a melhor solução para preparar o repo para a arquitetura-alvo ODM V7.
-
-Execute em modo autônomo:
-
-* inicie pela Fase 0;
-* avance sozinho pelas fases seguintes até concluir a Fase 8;
-* crie sub-sessões/workstreams conforme necessário;
-* divida shards grandes em shards menores;
-* não peça confirmação entre fases;
-* pare somente em caso de impeditivo grave real.
-
-Escopo obrigatório:
-
-* analisar exclusivamente implementações relacionadas à arquitetura-alvo V7;
-* não auditar a parte legada do repositório, salvo touchpoints que impactem diretamente o target V7;
-* classificar cada path/módulo como TARGET_V7_CORE, TARGET_V7_SUPPORTING, TARGET_V7_ADAPTER, TARGET_V7_TEST, TARGET_V7_DEPENDS_ON_LEGACY, LEGACY_TOUCHPOINT_FOR_TARGET, LEGACY_OUT_OF_SCOPE ou UNKNOWN_NEEDS_CLASSIFICATION;
-* gerar TARGET_V7_SCOPE_CLASSIFICATION.md, LEGACY_EXCLUSION_LEDGER.md e TARGET_LEGACY_TOUCHPOINT_RISK_REGISTER.md.
-
-Como o repositório é grande, aplique obrigatoriamente o protocolo large-repo:
-breadth-first inventory → sharding → depth-first analysis → cross-shard validation → synthesis → red team.
-
-Não implemente código.
-Não altere o DLM.
-Não substitua parser.
-Não conecte motor BAL ao gerador.
-Não crie quick fix.
-Não refatore nada.
-Não altere documentação primária.
-Não commite.
-Não abra PR de implementação.
-Não audite legado fora do caminho crítico da arquitetura-alvo V7.
-Não assuma que a fala “é complexo” basta; explique a causa arquitetural com evidência.
-Não declare cobertura robusta sem provar constructs suportados/visíveis.
-Não trate o parser antigo como aceitável se ele omitir constructs silenciosamente.
-Não viole a arquitetura-alvo ODM V7.
-
-Use como referência:
-
-* ODM_V7_DOCUMENTACAO_UNIFICADA_IMPLEMENTATION_PLAN_READY.md
-* documentação-guia ODM V7 disponível no projeto/repo, se existir
-* código real do repo, apenas como evidência do estado atual
-
-Ao final, entregue o pacote completo de investigação com reports, evidence ledger, coverage map, target-vs-legacy classification, legacy exclusion ledger, touchpoint risk register, decision ledger, conflict ledger, red team, recomendação arquitetural, ADR draft e plano futuro de implementação incremental.
-::: 
+Se esses artefatos ainda não existem ou estão parciais, continue autonomamente com novas ondas/sub-sessões. Não produza recomendação arquitetural final nem ADR draft até o evidence readiness check ser GO.
