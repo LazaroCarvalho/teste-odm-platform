@@ -1,30 +1,70 @@
-Modo: ODM V7 — Sessão 2 — P0.0 / N00 Repo Discovery.
+Modo: ODM V7 — Sessão mãe-orquestradora corrigida com execução autônoma.
 
-A Sessão 1 já reconstruiu, validou e instalou a nova documentação ODM V7 no repositório em:
+A documentação ODM V7 já foi reconstruída, validada e instalada no repositório em:
 
 `/docs/odm-v7-target-architecture/`
 
-A documentação anterior foi preservada como legado em:
-
-`/docs/_legacy/`
-
 Estou anexando o prompt:
 
-`PROMPT_DEVIN_SESSION_2_P0_0_N00_REPO_DISCOVERY.md`
+`PROMPT_DEVIN_MOTHER_ORCHESTRATOR_AUTONOMOUS_OPERATIONAL_START.md`
 
 Execute integralmente esse prompt.
 
-Objetivo desta sessão:
+Correção importante:
 
-* executar exclusivamente o `P0.0 / N00 Repo Discovery`;
-* usar como ponto inicial `/docs/odm-v7-target-architecture/IMPLEMENTATION_START_HERE.md`;
-* descobrir estrutura real do repo, paths, módulos, packages, classes, scripts, comandos, assets ODM/BRE, gaps, blockers e primeira wave segura;
-* produzir o relatório `P0_0_N00_REPO_DISCOVERY_REPORT`.
+Não use `IMPLEMENTATION_START_HERE.md` como driver operacional principal da sessão Devin.
 
-Não implemente código nesta sessão.
-Não refatore.
-Não altere regras ODM.
-Não materialize contracts/schemas/builders/registries ainda.
-Não inicie waves de implementação.
+Use-o apenas como índice/navegação geral da documentação instalada, se necessário.
 
-Ao final, entregue o relatório de discovery com GO/NO-GO e o prompt sugerido para a primeira sessão de implementação, caso exista GO.
+A entrada operacional correta é:
+
+`/docs/odm-v7-target-architecture/30_devin_operational_guide/ODM_V7_DEVIN_OPERATIONAL_GUIDE_PACKAGE/DEVIN_IMPLEMENTATION_GUIDE.devin.md`
+
+O documento mestre governante é:
+
+`/docs/odm-v7-target-architecture/30_devin_operational_guide/ODM_V7_DEVIN_OPERATIONAL_GUIDE_PACKAGE/00_MASTER_DEVIN_IMPLEMENTATION_GUIDE.md`
+
+Comece pela leitura desses arquivos e siga a ordem de leitura obrigatória do documento mestre.
+
+Objetivo da sessão:
+
+* iniciar a sessão mãe-orquestradora pelo entrypoint operacional correto;
+* carregar o documento mestre;
+* carregar DAG, rotas, cards de sessão e prompts operacionais;
+* executar primeiro `SC-00-REPO-DISCOVERY / N00 / P0.0 Repo Discovery`;
+* produzir `MOTHER_ORCHESTRATOR_BOOTSTRAP_REPORT`;
+* produzir `P0_0_N00_REPO_DISCOVERY_REPORT`;
+* converter o discovery em DAG/waves/sessões/subsessões reais;
+* continuar automaticamente para a primeira wave segura;
+* continuar para as waves/subsessões seguintes sem aguardar minha aprovação, desde que não exista blocker real ou Owner Review obrigatório.
+
+Autonomia obrigatória:
+
+Após o Repo Discovery, não pare esperando aprovação do Owner para continuar.
+
+Se o discovery retornar `GO_FOR_FIRST_IMPLEMENTATION_WAVE`, continue imediatamente para a primeira wave.
+
+Se retornar `PARTIAL_GO_WITH_WARNINGS`, continue imediatamente para a primeira wave segura e não bloqueada, registrando os warnings e exclusões.
+
+Se uma wave estiver bloqueada, isole o blocker, registre evidência e continue para a próxima wave independente segura se o DAG permitir.
+
+Só pare para me perguntar algo se houver uma condição real de `OWNER_REVIEW_EVIDENCE`, como:
+
+* decisão de escopo;
+* comportamento esperado ambíguo;
+* trade-off funcional;
+* aceitação de risco;
+* credenciais/acesso;
+* efeito colateral real;
+* julgamento IBM ODM / Real ODM sem evidência suficiente;
+* importability/export behavior incerto;
+* blocker que exija decisão humana.
+
+Não implemente código antes do Repo Discovery.
+Não invente paths, comandos, módulos, packages ou classes.
+Não use documentação legada como arquitetura-alvo ativa.
+Não declare production readiness, CI validated, deployment ready, importability verified, publish ready ou full behavioral equivalence.
+
+Se alguma pré-condição estiver ausente, pare e reporte o blocker explícito.
+
+Caso contrário, execute discovery e prossiga autonomamente para as ondas/tarefas/subsessões seguintes conforme documentação, DAG, cards, rotas e evidências reais do repositório.
