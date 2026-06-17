@@ -1,95 +1,30 @@
-Modo: ODM V7 — Reconstrução, instalação e registro da nova documentação-alvo no repositório.
+Modo: ODM V7 — Sessão 2 — P0.0 / N00 Repo Discovery.
 
-Estou anexando os artefatos finais para reconstrução e instalação documental da ODM Engineering Platform V7:
-
-1. `ODM_V7_FOUR_PACKAGES_UNIFIED_CONTAINER_FOR_DEVIN_UPDATED.md`
-2. `PROMPT_DEVIN_RECONSTRUCT_AND_INSTALL_4_ODM_V7_PACKAGES_UPDATED.md`
-3. `ODM_V7_FOUR_PACKAGES_UNIFIED_CONTAINER_VALIDATION_REPORT_UPDATED.md`, se anexado
-4. `ODM_V7_FOUR_PACKAGE_TRANSFER_ARTIFACT_MANIFEST_UPDATED.md`, se anexado
-
-Execute integralmente o arquivo:
-
-`PROMPT_DEVIN_RECONSTRUCT_AND_INSTALL_4_ODM_V7_PACKAGES_UPDATED.md`
-
-Objetivo desta sessão:
-
-* reconstruir fielmente os 4 pacotes ZIP ODM V7 a partir do contêiner Markdown;
-* validar SHA-256, tamanho, integridade ZIP e arquivos internos;
-* instalar a nova documentação em `/docs/odm-v7-target-architecture/`;
-* preservar os ZIPs reconstruídos em `/docs/odm-v7-target-architecture/00_source_packages/`;
-* extrair os 4 pacotes nas pastas definidas pelo prompt;
-* aposentar a documentação ODM V7 anterior como legado em `/docs/_legacy/`;
-* criar obrigatoriamente os entrypoints:
-
-  * `/docs/odm-v7-target-architecture/README.md`
-  * `/docs/odm-v7-target-architecture/IMPLEMENTATION_START_HERE.md`
-  * `/docs/odm-v7-target-architecture/DOCS_NAVIGATION_INDEX.md`
-  * `/docs/odm-v7-target-architecture/SOURCE_AUTHORITY_FOR_DEVIN.md`
-* atualizar `AGENTS.md`, skills, knowledge sources, playbooks, prompts, manifests e qualquer índice do repositório que aponte para documentação ODM V7 antiga;
-* garantir que, para qualquer tarefa futura ODM V7, o ponto inicial seja:
-  `/docs/odm-v7-target-architecture/IMPLEMENTATION_START_HERE.md`
-
-Escopo obrigatório:
-
-Esta sessão não deve implementar código de produto, não deve iniciar refatoração, não deve modificar regras ODM e não deve executar o plano de implementação ainda.
-
-Faça apenas:
-
-1. reconstrução documental;
-2. validação de integridade;
-3. instalação em `/docs`;
-4. aposentadoria segura da documentação antiga como legado;
-5. atualização de referências documentais/operacionais do ecossistema do repo;
-6. relatório final de evidências.
-
-Regras obrigatórias:
-
-* Não corromper, reformatar, normalizar ou modificar nenhum conteúdo reconstruído dos ZIPs.
-* Não inventar paths, módulos, comandos ou estrutura do repo além do que for descoberto.
-* Não apagar documentação antiga sem antes movê-la/preservá-la como legado.
-* Não declarar production readiness.
-* Não declarar CI validated.
-* Não declarar importability verified.
-* Não declarar publish ready.
-* Não declarar full behavioral equivalence.
-* Preservar a hierarquia documental da ODM V7.
-* Preservar os gates IBM ODM / Real ODM.
-* Registrar todo resultado como evidência.
-
-Estrutura final esperada:
+A Sessão 1 já reconstruiu, validou e instalou a nova documentação ODM V7 no repositório em:
 
 `/docs/odm-v7-target-architecture/`
 
-com as subpastas:
+A documentação anterior foi preservada como legado em:
 
-* `00_source_packages/`
-* `10_canonical_odm_documentation/`
-* `20_chatgpt_optimized_support_pack/`
-* `30_devin_operational_guide/`
-* `40_implementation_plan/`
-* `90_migration_and_validation/`
+`/docs/_legacy/`
 
-Saída esperada desta sessão:
+Estou anexando o prompt:
 
-`ODM_V7_DOCS_RECONSTRUCTION_AND_INSTALLATION_REPORT`
+`PROMPT_DEVIN_SESSION_2_P0_0_N00_REPO_DISCOVERY.md`
 
-Inclua obrigatoriamente:
+Execute integralmente esse prompt.
 
-* arquivos anexados recebidos;
-* hashes esperados e hashes reconstruídos;
-* status de reconstrução dos 4 ZIPs;
-* status de validação por ZIP;
-* status de validação por arquivo interno;
-* estrutura final criada em `/docs`;
-* localização da documentação antiga legada;
-* arquivos do repo atualizados para apontar para a nova documentação;
-* referências antigas encontradas;
-* referências antigas atualizadas;
-* referências antigas mantidas intencionalmente, se houver;
-* riscos;
-* warnings;
-* blockers;
-* Requirement→Evidence;
-* GO/NO-GO para iniciar, em sessão posterior, `P0.0 / N00 Repo Discovery`.
+Objetivo desta sessão:
 
-Não comece `P0.0 / N00 Repo Discovery` nesta sessão sem minha autorização explícita após o relatório de instalação documental.
+* executar exclusivamente o `P0.0 / N00 Repo Discovery`;
+* usar como ponto inicial `/docs/odm-v7-target-architecture/IMPLEMENTATION_START_HERE.md`;
+* descobrir estrutura real do repo, paths, módulos, packages, classes, scripts, comandos, assets ODM/BRE, gaps, blockers e primeira wave segura;
+* produzir o relatório `P0_0_N00_REPO_DISCOVERY_REPORT`.
+
+Não implemente código nesta sessão.
+Não refatore.
+Não altere regras ODM.
+Não materialize contracts/schemas/builders/registries ainda.
+Não inicie waves de implementação.
+
+Ao final, entregue o relatório de discovery com GO/NO-GO e o prompt sugerido para a primeira sessão de implementação, caso exista GO.
