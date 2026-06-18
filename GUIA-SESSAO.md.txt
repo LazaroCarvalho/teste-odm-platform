@@ -1,70 +1,41 @@
-Modo: ODM V7 — Sessão mãe-orquestradora corrigida com execução autônoma.
+Modo: Reconstrução byte-safe de pacotes ODM a partir de Markdown consolidado.
 
-A documentação ODM V7 já foi reconstruída, validada e instalada no repositório em:
+Estou anexando dois arquivos:
 
-`/docs/odm-v7-target-architecture/`
+1. `ODM_DUAL_PACKAGE_CONSOLIDATED_BYTE_SAFE.md`
+2. `DEVIN_RECONSTRUCT_ODM_PACKAGES_FROM_CONSOLIDATED_PROMPT.md`
 
-Estou anexando o prompt:
+Sua tarefa é seguir integralmente o prompt contido em `DEVIN_RECONSTRUCT_ODM_PACKAGES_FROM_CONSOLIDATED_PROMPT.md` para reconstruir, a partir do arquivo consolidado, os dois pacotes ZIP originais.
 
-`PROMPT_DEVIN_MOTHER_ORCHESTRATOR_AUTONOMOUS_OPERATIONAL_START.md`
+Regras obrigatórias:
 
-Execute integralmente esse prompt.
+* Não modificar o arquivo consolidado.
+* Não modificar nenhum arquivo original.
+* Executar tudo em diretório isolado de trabalho.
+* Reconstituir os ZIPs exclusivamente a partir dos blocos Base64 canônicos do Markdown consolidado.
+* Validar SHA-256, tamanho em bytes e integridade de cada ZIP reconstruído.
+* Validar também os arquivos internos extraídos, conforme manifesto/metadados do consolidado.
+* Se qualquer hash, tamanho, caminho, quantidade de arquivos ou validação divergir, interrompa imediatamente e reporte `NO-GO`.
+* Não tente corrigir, normalizar, reinterpretar encoding, renomear caminhos ou ajustar conteúdo manualmente.
+* O processo deve ser determinístico, auditável e reversível.
 
-Correção importante:
+Hashes esperados dos ZIPs reconstruídos:
 
-Não use `IMPLEMENTATION_START_HERE.md` como driver operacional principal da sessão Devin.
+`ODM_CHATGPT_OPTIMIZED_SUPPORT_PACK_CONSOLIDATED.zip`
 
-Use-o apenas como índice/navegação geral da documentação instalada, se necessário.
+`e9be726913coE1QN1E5VKBvWb4BF2rH8wRrSDKhZC3f0856faaa5a093a9a9cfaa`
 
-A entrada operacional correta é:
+`ODM_V7_TARGET_ARCHITECTURE_CONSOLIDATED_FINAL.zip`
 
-`/docs/odm-v7-target-architecture/30_devin_operational_guide/ODM_V7_DEVIN_OPERATIONAL_GUIDE_PACKAGE/DEVIN_IMPLEMENTATION_GUIDE.devin.md`
+`fcff16d7910c01c7b1e4d2897ee9d0c8fa2165b6e00f74539e7c734553f4eba6`
 
-O documento mestre governante é:
+Ao final, entregue um relatório com:
 
-`/docs/odm-v7-target-architecture/30_devin_operational_guide/ODM_V7_DEVIN_OPERATIONAL_GUIDE_PACKAGE/00_MASTER_DEVIN_IMPLEMENTATION_GUIDE.md`
+* arquivos reconstruídos;
+* paths gerados;
+* hashes SHA-256;
+* quantidade de arquivos auditados;
+* resultado `GO` ou `NO-GO`;
+* qualquer divergência encontrada.
 
-Comece pela leitura desses arquivos e siga a ordem de leitura obrigatória do documento mestre.
-
-Objetivo da sessão:
-
-* iniciar a sessão mãe-orquestradora pelo entrypoint operacional correto;
-* carregar o documento mestre;
-* carregar DAG, rotas, cards de sessão e prompts operacionais;
-* executar primeiro `SC-00-REPO-DISCOVERY / N00 / P0.0 Repo Discovery`;
-* produzir `MOTHER_ORCHESTRATOR_BOOTSTRAP_REPORT`;
-* produzir `P0_0_N00_REPO_DISCOVERY_REPORT`;
-* converter o discovery em DAG/waves/sessões/subsessões reais;
-* continuar automaticamente para a primeira wave segura;
-* continuar para as waves/subsessões seguintes sem aguardar minha aprovação, desde que não exista blocker real ou Owner Review obrigatório.
-
-Autonomia obrigatória:
-
-Após o Repo Discovery, não pare esperando aprovação do Owner para continuar.
-
-Se o discovery retornar `GO_FOR_FIRST_IMPLEMENTATION_WAVE`, continue imediatamente para a primeira wave.
-
-Se retornar `PARTIAL_GO_WITH_WARNINGS`, continue imediatamente para a primeira wave segura e não bloqueada, registrando os warnings e exclusões.
-
-Se uma wave estiver bloqueada, isole o blocker, registre evidência e continue para a próxima wave independente segura se o DAG permitir.
-
-Só pare para me perguntar algo se houver uma condição real de `OWNER_REVIEW_EVIDENCE`, como:
-
-* decisão de escopo;
-* comportamento esperado ambíguo;
-* trade-off funcional;
-* aceitação de risco;
-* credenciais/acesso;
-* efeito colateral real;
-* julgamento IBM ODM / Real ODM sem evidência suficiente;
-* importability/export behavior incerto;
-* blocker que exija decisão humana.
-
-Não implemente código antes do Repo Discovery.
-Não invente paths, comandos, módulos, packages ou classes.
-Não use documentação legada como arquitetura-alvo ativa.
-Não declare production readiness, CI validated, deployment ready, importability verified, publish ready ou full behavioral equivalence.
-
-Se alguma pré-condição estiver ausente, pare e reporte o blocker explícito.
-
-Caso contrário, execute discovery e prossiga autonomamente para as ondas/tarefas/subsessões seguintes conforme documentação, DAG, cards, rotas e evidências reais do repositório.
+Não avance para nenhuma outra tarefa além da reconstrução e validação dos pacotes.
